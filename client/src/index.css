@@ -1,0 +1,227 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body{
+    /* background-color: rgb(205, 241, 241); */
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+color: aliceblue;
+}
+/* --------navbar************* */
+.nav{
+    height: 3rem;
+    background-color: rgb(135, 151, 153);
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+.nav .project-Name{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    margin-left: 10px;
+
+}
+.nav .home{
+    font-weight: 400;
+    font-family:'Times New Roman', Times, serif;   
+}
+.nav a{
+    font-size: x-large;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 1s linear;
+}
+.nav a:hover{
+    text-decoration: underline;
+}
+@media only screen and (max-width: 470px) {
+    .nav{
+        gap: 1rem;
+    }
+    .nav a{
+        font-size: large;       
+        color: rgb(0, 0, 0);
+    }
+    
+}
+
+/* ---------top text */
+.my-app{
+    text-align: center;
+    margin: 50px 0;
+
+}
+/* ********search--space**************** */
+.search{
+    margin-top: 150px; 
+    display: flex;
+    flex-direction:column;
+    min-height: 12em;
+    /* border: 2px solid black; */
+    align-items: center;
+    /* justify-content: center; */
+}
+
+/* input section  input have 2-class for better on effects; */
+.search .inp-none{
+    width: 15rem;
+    border-radius:  20px ;
+    /* border: blue; */
+    border: 2px solid rgb(6, 165, 197);
+    padding: 3px 8px;
+    outline: none;
+}
+.search .inp-vis{
+    outline: none;
+    width: 15rem;
+    border-radius: 0;
+    border: 2px solid rgb(6, 165, 197);
+    box-shadow: 3px 2px 4px 1px rgb(81, 102, 100);
+    border-bottom: 0px solid black;
+}
+/* when starting app*- recommend hidden */
+
+.searchRecommend{
+    display: none; 
+    
+}
+/* when click on search{input}- recommend visisble */
+.searchRecommend-vis{
+    margin-bottom: 5rem;
+    max-height: 8rem;
+    width: 15rem;
+    border: 2px  solid rgb(6, 165, 197);
+    border-top: 0px solid black;
+    overflow: hidden;
+    box-shadow: 3px 2px 4px 1px rgb(81, 102, 100);
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+.searchRecommend .names{
+    
+    color: blue;
+    
+    padding: 3px 8px;
+}
+.searchRecommend-vis .names:hover{
+    background-color: #41567e;
+    box-shadow: 1px 1px black;
+}
+
+/* ************discripsion section */
+/* .Mediciens{ */
+    /* display: flex; */
+    /* border: 2px solid black; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+/* } */
+.Mediciens .information{
+    /* border: 2px solid black; */
+    text-align: center;
+    
+}
+.Mediciens .drugs{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+
+}
+
+
+/* ************card************* */
+.card{         
+    margin: 20px;
+   /* margin-top: 200px;  */
+  min-height: 300px;
+   max-width: 250px;
+   min-width: 210px;
+  background-color: #0F2027 ;
+
+    color: aliceblue;
+    border-radius: 2em;
+    transform-style: preserve-3d;
+    transition:  1s;
+    
+}
+.card-front{
+    
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: rgb(0, 0, 0);
+    background-image:url("http://p.motionelements.com/stock-video/medical/me313209-medicine-drug-2aw-capsule-tablet-pills-hd-a0005.jpg");
+    /* background: url("./pill2.jfif")center center/cover  no-repeat  ; */
+    /* background: url("http://p.motionelements.com/stock-video/medical/me313209-medicine-drug-2aw-capsule-tablet-pills-hd-a0005.jpg")center center/cover  no-repeat  ; */
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    
+    box-shadow: 2px 2px 3px   rgb(111, 161, 169);
+    
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+    /* border: 2px solid black; */
+    padding: 7px;
+    border-radius: 2rem;
+}
+ /* N for drug name  */
+.card-front .N{
+    max-width: 250px;
+    padding: 2px;
+    /* border: 2px solid black; */
+
+}
+.card-back{
+    /* border: 2px solid black; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotatey(180deg);
+    
+    border-radius: 1.5rem;
+    box-shadow: 3px 3px 3px  rgb(45, 78, 84);
+
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.card:hover{
+    transform: rotatey(180deg);
+}
+.card-back .name{
+    font-size: 2rem;           
+    text-align: center;
+   text-decoration: underline;
+   height: auto;
+   
+}
+.about{
+    /* border: 2px solid rgb(255, 0, 0); */
+    margin: 7px;
+  
+}
+.info{
+
+    /* border: 2px  solid black; */
+    padding: 5px 0px ;
+    font-size: 0.7rem;
+    color: rgb(211, 211, 212);
+}
+.info span{
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255);
+}
